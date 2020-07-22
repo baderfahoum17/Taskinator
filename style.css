@@ -1,0 +1,48 @@
+h2 {
+  text-align: center;
+}
+h2:before,
+h2:after {
+  font-family: "Some cool font with glyphs", serif;
+  content: "\00d7"; /* Some fancy character */
+  color: #c83f3f;
+}
+h2:before {
+  margin-right: 10px;
+}
+h2:after {
+  margin-left: 10px;
+}
+
+body {
+  background-color: rgb(72, 145, 132);
+}
+/* ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+} */
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+hr.dashed {
+  border: 0;
+  border-bottom: 2px dashed #ccc;
+  background: #999;
+}
+
+.striked {
+  text-decoration: line-through;
+}
+.striked::before {
+  display: inline-block;
+  padding-right: 5px;
+  content: "\2611"; /* Some fancy character */
+  color: #ffffff;
+}
