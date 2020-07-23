@@ -5,7 +5,7 @@ h2:before,
 h2:after {
   font-family: "Some cool font with glyphs", serif;
   content: "\00d7"; /* Some fancy character */
-  color: #c83f3f;
+  color: #ffc857;
 }
 h2:before {
   margin-right: 10px;
@@ -15,7 +15,7 @@ h2:after {
 }
 
 body {
-  background-color: rgb(72, 145, 132);
+  background-color: #2e4052;
 }
 /* ul {
   display: flex;
@@ -23,7 +23,9 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 } */
-
+ul {
+  transition: all 0.2s ease-out;
+}
 li {
   display: flex;
   align-items: center;
@@ -31,18 +33,104 @@ li {
   padding: 5px;
 }
 
+li .todotext {
+  width: 100%;
+  text-align: left;
+}
+li .todotext .igroup {
+  width: 100%;
+  text-align: left;
+}
+li.main {
+  width: 100%;
+  border: 1px solid #ffc857;
+  border-top: 0px;
+  border-left: 0px;
+  border-radius: 40px 40px 40px 40px;
+  padding: 1.5%;
+  padding-right: 3%;
+
+  color: #ffc857;
+  background-color: #2e4052;
+  font-size: 24px;
+  transition: 0.3s ease-in-out;
+}
+
+li.main:hover {
+  background-color: #42678c;
+}
+
+i {
+  transition: 0.3s ease;
+  animation-delay: 0.5s;
+}
+i:hover {
+  color: #fa2c3a;
+}
+.subli {
+  overflow: visible;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: small;
+  padding-left: 40px;
+}
+.insideli {
+  font-size: 17px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
 hr.dashed {
   border: 0;
   border-bottom: 2px dashed #ccc;
-  background: #999;
 }
 
 .striked {
   text-decoration: line-through;
+  color: #eb8a90;
 }
 .striked::before {
   display: inline-block;
   padding-right: 5px;
   content: "\2611"; /* Some fancy character */
   color: #ffffff;
+}
+
+.delete {
+  cursor: pointer;
+}
+
+.filtered {
+  animation-delay: 0.4s;
+  transition: all 0.4s ease-out;
+
+  display: none !important;
+}
+
+.igroup {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  li.main {
+    font-size: 80%;
+  }
+  .insideli {
+    font-size: 50%;
+  }
 }
