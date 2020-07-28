@@ -1,3 +1,6 @@
+const fs = require("fs");
+const path = require("path");
+
 function missingHandler(request, response) {
   filePath = path.join(__dirname, "..", "notfound.html");
   fs.readFile(filePath, (err, notfoundfile) => {
