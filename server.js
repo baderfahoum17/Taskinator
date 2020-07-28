@@ -3,10 +3,7 @@ const port = process.env.PORT || 4000;
 const router = require("./router");
 const hostname = process.env.HOSTNAME || "localhost";
 
-const server = http.createServer((request, response) => {
-  response.end("hello");
-  //router
-});
+const server = http.createServer(router);
 
 server.listen(process.env.PORT || 4000, () =>
   console.log(`Listining on http://localhost:${port}`)
