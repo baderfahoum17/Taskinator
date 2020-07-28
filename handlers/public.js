@@ -21,7 +21,7 @@ function publicHandler(request, response) {
     if (err) {
       missingHandler(request, response);
     } else {
-      response.writeHead(200, {"content-type": "text/html"});
+      response.writeHead(200, {"content-type": type});
       response.end(file);
     }
   });
