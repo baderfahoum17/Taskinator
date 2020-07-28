@@ -6,7 +6,7 @@ const types = {
   html: "text/html",
   css: "text/css",
   js: "application/javascript",
-  icon: "image/x-icon",
+  ico: "image/x-icon",
 };
 
 function publicHandler(request, response) {
