@@ -14,7 +14,7 @@ function publicHandler(request, response) {
   const ext = urlArr[1];
   const type = types[ext];
   // public dir is one level above this
-  const filePath = path.join(__dirname, "../public/", url);
+  const filePath = path.join(__dirname, "..", url);
   fs.readFile(filePath, (err, file) => {
     if (err) {
       missingHandler(request, response);
