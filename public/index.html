@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Taskinator</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="text-center text-light my-4">
+        <h2 class="mb-4">Taskinator</h2>
+        <!-- maybe a search implementation? -->
+        <form class="search">
+          <input
+            type="text"
+            name="search"
+            class="form_field m-auto"
+            placeholder="Search Task"
+          />
+        </form>
+      </header>
+      <ul class="todos list-group mx-auto text-light">
+        <li class="text-center main">
+          <span class="todotext"
+            >Finish a javascript ProjectFinish a javascript Project</span
+          >
+          <div class="igroup">
+            <i class="fa fa-plus plus" aria-hidden="true"></i>
+            <i class="fa fa-trash delete" aria-hidden="true"></i>
+          </div>
+        </li>
+        <li class="text-center main">
+          <span class="todotext">annother task</span>
+
+          <div class="igroup">
+            <i class="fa fa-plus plus" aria-hidden="true"></i>
+            <i class="fa fa-trash delete" aria-hidden="true"></i>
+          </div>
+        </li>
+      </ul>
+      <hr class="dashed" />
+      <form class="add text-center my-4">
+        <div class="input-group">
+          <input
+            class="form-control m-auto"
+            type="text"
+            name="add"
+            placeholder="Enter a new Task "
+            required
+          />
+          <span class="input-group-btn">
+            <button class="btn btn-info">Add Task</button>
+          </span>
+        </div>
+      </form>
+    </div>
+
+    <!-- Include our actual code -->
+    <script src="app.js"></script>
+    <!-- Include the tests for our code (it's best to keep these separate) -->
+    <script src="app.test.js"></script>
+  </body>
+</html>
