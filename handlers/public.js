@@ -6,6 +6,7 @@ const types = {
   html: "text/html",
   css: "text/css",
   js: "application/javascript",
+  ico: "image/x-icon",
 };
 
 function publicHandler(request, response) {
@@ -14,7 +15,9 @@ function publicHandler(request, response) {
   const ext = urlArr[1];
   const type = types[ext];
   // public dir is one level above this
+
   const filePath = path.join(__dirname, "..", url);
+  console.log(filePath);
   fs.readFile(filePath, (err, file) => {
     if (err) {
       missingHandler(request, response);
