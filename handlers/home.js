@@ -4,7 +4,7 @@ const missingHandler = require("./missing");
 
 function homeHandler(request, response) {
   // public directory is one level above this
-  const filePath = path.join(__dirname, "..", "index.html");
+  const filePath = path.join(__dirname, "../public/", "index.html");
   fs.readFile(filePath, (err, file) => {
     if (err) {
       missingHandler(request, response);
